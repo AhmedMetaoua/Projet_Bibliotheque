@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1115</width>
+    <height>821</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="page">
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="styleSheet">
+              <string notr="true">border-image: url(:/newPrefix/4099601.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_2">
+          <layout class="QVBoxLayout" name="verticalLayout_2"/>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1115</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuGestion_Des_Etudiants">
+    <property name="title">
+     <string>Gestion Des Etudiants</string>
+    </property>
+    <widget class="QMenu" name="menuMise_A_Jour_Des_Etudiants">
+     <property name="title">
+      <string>Mise A Jour Des Etudiants</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="actionAjouter_Un_Etudiant"/>
+     <addaction name="separator"/>
+     <addaction name="actionModifier_Etudiant"/>
+     <addaction name="separator"/>
+     <addaction name="actionSupprimer_Un_Etudiant"/>
+    </widget>
+    <addaction name="menuMise_A_Jour_Des_Etudiants"/>
+    <addaction name="separator"/>
+    <addaction name="actionRecherche_Affichage_Trie"/>
+   </widget>
+   <widget class="QMenu" name="menuGestion_Des_Livres">
+    <property name="title">
+     <string>Gestion Des Livres</string>
+    </property>
+    <widget class="QMenu" name="menuMise_A_Jour">
+     <property name="title">
+      <string>Mise A Jour </string>
+     </property>
+     <addaction name="actionAjouter_Nouveau_Livre"/>
+     <addaction name="separator"/>
+     <addaction name="actionModifier_Nbr_D_Exemplaires"/>
+     <addaction name="separator"/>
+     <addaction name="actionSupprimer_Un_Livre"/>
+    </widget>
+    <addaction name="menuMise_A_Jour"/>
+    <addaction name="separator"/>
+    <addaction name="actionRecherche_Affichage"/>
+   </widget>
+   <widget class="QMenu" name="menuGestion_Des_Emprunts">
+    <property name="title">
+     <string>Gestion Des Emprunts</string>
+    </property>
+    <widget class="QMenu" name="menuMise_Ajour">
+     <property name="title">
+      <string>Mise Ajour</string>
+     </property>
+     <addaction name="actionAjouter_Un_Nouvel_Emprunt"/>
+     <addaction name="separator"/>
+     <addaction name="actionRetour_D_un_Emprunt"/>
+     <addaction name="separator"/>
+     <addaction name="actionModifier_Emprunt"/>
+     <addaction name="separator"/>
+     <addaction name="actionSupprimer_Un_Emprunt"/>
+    </widget>
+    <addaction name="menuMise_Ajour"/>
+    <addaction name="separator"/>
+    <addaction name="actionRecherche_Affichage_2"/>
+   </widget>
+   <widget class="QMenu" name="menuEnregistrement_et_Recuperation">
+    <property name="title">
+     <string>Enregistrement et Recuperation</string>
+    </property>
+    <widget class="QMenu" name="menuEnregistrement">
+     <property name="title">
+      <string>Enregistrement</string>
+     </property>
+     <addaction name="actionEnregistrement_Des_Etudiants"/>
+     <addaction name="separator"/>
+     <addaction name="actionEnregistrement_Des_Livres"/>
+     <addaction name="separator"/>
+     <addaction name="actionEnregistrement_Des_Emprunts"/>
+    </widget>
+    <widget class="QMenu" name="menuRecuperation">
+     <property name="title">
+      <string>Recuperation</string>
+     </property>
+     <addaction name="actionRecuperation_Des_Etudiants"/>
+     <addaction name="separator"/>
+     <addaction name="actionRecuperation_Des_Livres"/>
+     <addaction name="separator"/>
+     <addaction name="actionRecuperation_Des_Emprunts"/>
+    </widget>
+    <addaction name="menuEnregistrement"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionEnregistrer_Tous_2"/>
+    <addaction name="separator"/>
+    <addaction name="menuRecuperation"/>
+    <addaction name="separator"/>
+    <addaction name="actionRecuperer_Tous"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuGestion_Des_Etudiants"/>
+   <addaction name="menuGestion_Des_Livres"/>
+   <addaction name="menuGestion_Des_Emprunts"/>
+   <addaction name="menuEnregistrement_et_Recuperation"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAjouter_Un_Etudiant">
+   <property name="text">
+    <string>Ajouter Etudiant</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_Un_Etudiant">
+   <property name="text">
+    <string>Supprimer Etudiant</string>
+   </property>
+  </action>
+  <action name="actionCherche">
+   <property name="text">
+    <string>Recherche</string>
+   </property>
+  </action>
+  <action name="actionAffiche">
+   <property name="text">
+    <string>Affiche</string>
+   </property>
+  </action>
+  <action name="actionModifier_Etudiant">
+   <property name="text">
+    <string>Modifier Etudiant</string>
+   </property>
+  </action>
+  <action name="actionRecherche_Affichage">
+   <property name="text">
+    <string>Recherche , Affichage</string>
+   </property>
+  </action>
+  <action name="actionRecherche_Affichage_2">
+   <property name="text">
+    <string>Recherche , Affichage</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer_Tous_2">
+   <property name="text">
+    <string>Enregistrer Tous</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionRecuperer_Tous">
+   <property name="text">
+    <string>Recuperer Tous</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionEnregistrement_Des_Etudiants">
+   <property name="text">
+    <string>Enregistrement Des Etudiants</string>
+   </property>
+  </action>
+  <action name="actionEnregistrement_Des_Livres">
+   <property name="text">
+    <string>Enregistrement Des Livres </string>
+   </property>
+  </action>
+  <action name="actionEnregistrement_Des_Emprunts">
+   <property name="text">
+    <string>Enregistrement Des Emprunts</string>
+   </property>
+  </action>
+  <action name="actionRecuperation_Des_Etudiants">
+   <property name="text">
+    <string>Recuperation Des Etudiants</string>
+   </property>
+  </action>
+  <action name="actionRecuperation_Des_Livres">
+   <property name="text">
+    <string>Recuperation Des Livres</string>
+   </property>
+  </action>
+  <action name="actionRecuperation_Des_Emprunts">
+   <property name="text">
+    <string>Recuperation Des Emprunts</string>
+   </property>
+  </action>
+  <action name="actionAjouter_Nouveau_Livre">
+   <property name="text">
+    <string>Ajouter Nouveau Livre</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_Un_Livre">
+   <property name="text">
+    <string>Supprimer Un Livre</string>
+   </property>
+  </action>
+  <action name="actionModifier_Nbr_D_Exemplaires">
+   <property name="text">
+    <string>Modifier Nbr D'Exemplaires</string>
+   </property>
+  </action>
+  <action name="actionAjouter_Un_Nouvel_Emprunt">
+   <property name="text">
+    <string>Ajouter Un Nouvel Emprunt</string>
+   </property>
+  </action>
+  <action name="actionRetour_D_un_Emprunt">
+   <property name="text">
+    <string>Retour D'un Emprunt</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_Un_Emprunt">
+   <property name="text">
+    <string>Supprimer Un Emprunt</string>
+   </property>
+  </action>
+  <action name="actionModifier_Emprunt">
+   <property name="text">
+    <string>Modifier Emprunt</string>
+   </property>
+  </action>
+  <action name="actionRecherche_Affichage_Trie">
+   <property name="text">
+    <string>Recherche , Affichage ,Trie</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="menu.qrc"/>
+ </resources>
+ <connections/>
+</ui>
